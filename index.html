@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OMMI Cafe & Kitchen | Fitness Meal Plans & Official Menu</title>
+  <meta name="description" content="Explore Monthly Fitness Meal Plans & Table Reservations at OMMI Cafe & Kitchen. Eat Right, Train Hard, Live Strong! Call or WhatsApp 9490528726.">
+  <meta name="keywords" content="OMMI Cafe, Monthly Meal Plan, Table Booking, Fitness Meals, Protein Salad, Sprouts, Egg Salad, Booking 9490528726">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,600&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Floating Glass Capsule Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <div class="logo-wrapper">
+          <img src="assets/logo.jpg" alt="OMMI Cafe & Kitchen Logo" class="brand-logo">
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">OMMI</span>
+          <span class="brand-subtitle">CAFE & KITCHEN</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">Our Outlet</a>
+        <a href="#plans" class="nav-link">Meal Plans</a>
+        <a href="#menu" class="nav-link">Official Menu</a>
+        <a href="#reserve" class="nav-link">Bookings</a>
+        <a href="#contact" class="nav-link">Location</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          <span>OPEN NOW</span>
+        </div>
+
+        <button class="nav-action-btn" id="my-bookings-trigger" aria-label="View My Bookings">
+          <i data-lucide="calendar"></i>
+          <span>My Bookings</span>
+          <span class="badge-count" id="bookings-badge-count">0</span>
+        </button>
+
+        <button class="nav-action-btn" id="cart-trigger" aria-label="View Order Cart">
+          <i data-lucide="shopping-bag"></i>
+          <span>Cart</span>
+          <span class="badge-count" id="cart-badge-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-bg-overlay"></div>
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i data-lucide="dumbbell"></i>
+        <span>EAT RIGHT • TRAIN HARD • LIVE STRONG</span>
+      </div>
+      <h1 class="hero-title">
+        Fuel Your Body at <br>
+        <span class="highlight-gold">OMMI Cafe & Kitchen</span>
+      </h1>
+      <p class="hero-description">
+        Reserve your dining table online or subscribe to monthly fitness protein meal plans! Enjoy fresh fruit juices, milkshakes, Maggie, and crispy snacks.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#reserve" class="btn btn-primary">
+          <span>Book Table / Meal Plan</span>
+          <i data-lucide="calendar"></i>
+        </a>
+        <a href="#menu" class="btn btn-outline">
+          <span>Explore Menu</span>
+          <i data-lucide="utensils"></i>
+        </a>
+      </div>
+
+      <!-- Hero Gourmet Showcase Bar -->
+      <div class="hero-showcase-bar">
+        <div class="hero-showcase-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdPBSp9a0TK2joJCvybvj882voqrMDc1qoPuWcz1zEew&s=10" alt="Egg Salad" class="hero-showcase-img">
+          <span>High Protein Egg Salad</span>
+        </div>
+        <div class="hero-showcase-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlDuMLn_hBdM9XtwuxWbtg5xHqu-04fxqM2cp1ulYNdw&s=10" alt="Banana Shake" class="hero-showcase-img">
+          <span>Fresh Banana Shake</span>
+        </div>
+        <div class="hero-showcase-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEkGS1tMn7E6E8eWf8f08Fe4y9yI7l82bC9w_xumFcnQ&s=10" alt="Chicken Pakoda" class="hero-showcase-img">
+          <span>Hot Crispy Pakoda</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature Highlights -->
+  <section class="features-bar">
+    <div class="features-container">
+      <div class="feature-item">
+        <div class="feature-icon"><i data-lucide="dumbbell"></i></div>
+        <div class="feature-info">
+          <h4>Fitness Meal Plans</h4>
+          <p>Monthly Protein Subscriptions</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><i data-lucide="phone-call"></i></div>
+        <div class="feature-info">
+          <h4>Plan Booking: 9490528726</h4>
+          <p>Instant Phone & WhatsApp</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><i data-lucide="heart"></i></div>
+        <div class="feature-info">
+          <h4>Good Food, Better You</h4>
+          <p>Nourish Your Fitness Goals</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><i data-lucide="calendar-check"></i></div>
+        <div class="feature-info">
+          <h4>Online Booking System</h4>
+          <p>Table & Plan Confirmation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fitness Meal Plans Section -->
+  <section id="plans" class="section plans-section">
+    <div class="section-container">
+      <div class="section-header center">
+        <div class="section-tag">
+          <i data-lucide="dumbbell"></i>
+          <span>EAT RIGHT • TRAIN HARD • LIVE STRONG</span>
+        </div>
+        <h2 class="section-title">Monthly Fitness <span class="highlight-gold">Meal Plans</span></h2>
+        <p class="section-subtitle">FUEL YOUR BODY • NOURISH YOUR GOALS • BE YOUR BEST</p>
+      </div>
+
+      <!-- Plan Comparison Table Grid -->
+      <div class="plans-grid grid-2-col">
+        
+        <!-- MONTHLY SUBSCRIPTION COLUMN -->
+        <div class="plan-column-card monthly-card card-hover-lift">
+          <div class="plan-column-header">
+            <h3><i data-lucide="calendar"></i> MONTHLY SUBSCRIPTIONS</h3>
+            <span class="plan-sub-tag">30-Day Subscription</span>
+          </div>
+
+          <div class="plan-items-list">
+            <div class="plan-item-row" style="cursor: pointer;" onclick="quickBookPlan('Egg Salad Plan')">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdPBSp9a0TK2joJCvybvj882voqrMDc1qoPuWcz1zEew&s=10" alt="Egg Salad" class="plan-item-img">
+              <div class="plan-item-info">
+                <h4>Egg Salad <small>(4 Eggs)</small></h4>
+                <p>High protein boiled egg salad with fresh veggies</p>
+              </div>
+              <div class="plan-price-tag">₹1399</div>
+            </div>
+
+            <div class="plan-item-row" style="cursor: pointer;" onclick="quickBookPlan('Fit Sprouts Plan')">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsttKg3FCB-JbwDHVAG8hpe5dGgWxw8brJ7qahw-n0tQ&s=10" alt="Fit Sprouts" class="plan-item-img">
+              <div class="plan-item-info">
+                <h4>Fit Sprouts</h4>
+                <p>100% organic sprouted moong & gram salad</p>
+              </div>
+              <div class="plan-price-tag">₹749</div>
+            </div>
+
+            <div class="plan-item-row" style="cursor: pointer;" onclick="quickBookPlan('Banana Shake Plan')">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlDuMLn_hBdM9XtwuxWbtg5xHqu-04fxqM2cp1ulYNdw&s=10" alt="Banana Shake" class="plan-item-img">
+              <div class="plan-item-info">
+                <h4>Banana Shake</h4>
+                <p>Fresh banana energy shake daily</p>
+              </div>
+              <div class="plan-price-tag">₹1099</div>
+            </div>
+
+            <div class="plan-item-row" style="cursor: pointer;" onclick="quickBookPlan('Dry Fruit Shake Plan')">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiArccpDZGGwyHrdZkfI4DLyu0fXFUog2wWrkfehSkHQ&s=10" alt="Dry Fruit Banana Shake" class="plan-item-img">
+              <div class="plan-item-info">
+                <h4>Dry Fruit Banana Shake</h4>
+                <p>Rich dry fruit nuts & banana protein shake</p>
+              </div>
+              <div class="plan-price-tag">₹1999</div>
+            </div>
+
+            <div class="plan-item-row" style="cursor: pointer;" onclick="quickBookPlan('Curd Veg Salad Plan')">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpA1wSPJAartL5US682DHE2eA5yyX-jbAKrslui1ZIJQ&s=10" alt="Curd + Veg Salad" class="plan-item-img">
+              <div class="plan-item-info">
+                <h4>Curd + Veg Salad</h4>
+                <p>Probiotic chilled curd with fresh salad</p>
+              </div>
+              <div class="plan-price-tag">₹1399</div>
+            </div>
+
+            <div class="plan-item-row" style="cursor: pointer;" onclick="quickBookPlan('Dry Fruit Bowl Plan')">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWTM2yiiHF2AhbOB1BOvsGEtcxnPAqkPdxjCGJvc716A&s=10" alt="Dry Fruit Bowl" class="plan-item-img">
+              <div class="plan-item-info">
+                <h4>Dry Fruit Bowl</h4>
+                <p>Roasted almonds, cashews & raisins daily</p>
+              </div>
+              <div class="plan-price-tag">₹1099</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SINGLE MEAL COLUMN -->
+        <div class="plan-column-card single-card card-hover-lift">
+          <div class="plan-column-header">
+            <h3><i data-lucide="utensils"></i> SINGLE MEAL PRICES</h3>
+            <span class="plan-sub-tag">Per Meal / Order</span>
+          </div>
+
+          <div class="plan-items-list">
+            <div class="plan-item-row">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdPBSp9a0TK2joJCvybvj882voqrMDc1qoPuWcz1zEew&s=10" alt="Egg Salad" class="plan-item-img">
+              <div class="plan-item-info">
+                <h4>Egg Salad</h4>
+                <p>Single egg salad serving</p>
+              </div>
+              <div class="plan-price-tag single">₹50</div>
+            </div>
+
+            <div class="plan-item-row">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsttKg3FCB-JbwDHVAG8hpe5dGgWxw8brJ7qahw-n0tQ&s=10" alt="Fit Sprouts" class="plan-item-img">
+              <div class="plan-item-info">
+                <h4>Fit Sprouts</h4>
+                <p>Single fresh sprouts serving</p>
+              </div>
+              <div class="plan-price-tag single">₹25</div>
+            </div>
+
+            <div class="plan-item-row">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlDuMLn_hBdM9XtwuxWbtg5xHqu-04fxqM2cp1ulYNdw&s=10" alt="Banana Shake" class="plan-item-img">
+              <div class="plan-item-info">
+                <h4>Banana Shake</h4>
+                <p>Single banana shake glass</p>
+              </div>
+              <div class="plan-price-tag single">₹40</div>
+            </div>
+
+            <div class="plan-item-row">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiArccpDZGGwyHrdZkfI4DLyu0fXFUog2wWrkfehSkHQ&s=10" alt="Dry Fruit Banana Shake" class="plan-item-img">
+              <div class="plan-item-info">
+                <h4>Dry Fruit Banana Shake</h4>
+                <p>Single loaded dry fruit shake</p>
+              </div>
+              <div class="plan-price-tag single">₹80</div>
+            </div>
+
+            <div class="plan-item-row">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpA1wSPJAartL5US682DHE2eA5yyX-jbAKrslui1ZIJQ&s=10" alt="Curd + Veg Salad" class="plan-item-img">
+              <div class="plan-item-info">
+                <h4>Curd + Veg Salad</h4>
+                <p>Single curd veg salad serving</p>
+              </div>
+              <div class="plan-price-tag single">₹50</div>
+            </div>
+
+            <div class="plan-item-row">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWTM2yiiHF2AhbOB1BOvsGEtcxnPAqkPdxjCGJvc716A&s=10" alt="Dry Fruit Bowl" class="plan-item-img">
+              <div class="plan-item-info">
+                <h4>Dry Fruit Bowl</h4>
+                <p>Single dry fruit bowl serving</p>
+              </div>
+              <div class="plan-price-tag single">₹40</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan Booking Phone Banner -->
+      <div class="plan-booking-banner card-hover-lift">
+        <div class="booking-banner-text">
+          <span class="booking-tag">FOR INSTANT BOOKINGS & INQUIRIES</span>
+          <h3>Call or WhatsApp: <a href="https://wa.me/919490528726" target="_blank" rel="noopener" class="phone-link"><i data-lucide="phone"></i> 9490528726</a></h3>
+        </div>
+        <div class="booking-banner-actions">
+          <button class="btn btn-primary" id="view-plan-board-btn">
+            <i data-lucide="file-image"></i> View Plan Board
+          </button>
+          <a href="#reserve" class="btn btn-outline">
+            <i data-lucide="calendar"></i> Book Online Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Storefront Showcase Section -->
+  <section id="about" class="section about-section">
+    <div class="section-container grid-2-col">
+      <div class="storefront-card card-hover-lift">
+        <img src="assets/ommi_storefront.png" alt="OMMI Cafe & Kitchen Storefront Outlet" class="storefront-img">
+        <div class="storefront-overlay">
+          <div class="logo-wrapper" style="width: 48px; height: 48px;">
+            <img src="assets/logo.jpg" alt="OMMI Logo" class="brand-logo">
+          </div>
+          <div>
+            <div class="storefront-badge-text">OMMI CAFE & KITCHEN</div>
+            <p style="font-size: 0.75rem; color: #CBD5E1;">Good Food, Better You, Best Life</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <div class="section-tag">
+          <i data-lucide="store"></i>
+          <span>ABOUT OUR CAFE & KITCHEN</span>
+        </div>
+        <h2 class="section-title">
+          Good Food, <br>
+          <span class="highlight-gold">Good Mood!</span>
+        </h2>
+        <p class="about-lead">
+          Welcome to <strong>OMMI Cafe & Kitchen</strong>. We serve a delicious variety of fresh fruit juices, thick milkshakes, crispy hot snacks, Maggie variations, ice creams, and high protein fitness meals!
+        </p>
+        <p class="about-body">
+          Order online for quick counter pickup or subscribe to our monthly fitness meal plans. All dishes are prepared hot and fresh to order with utmost quality.
+        </p>
+
+        <div class="stats-grid">
+          <div class="stat-box">
+            <h3>₹10+</h3>
+            <p>Pocket Friendly</p>
+          </div>
+          <div class="stat-box">
+            <h3>50+</h3>
+            <p>Menu Items</p>
+          </div>
+          <div class="stat-box">
+            <h3>Monthly</h3>
+            <p>Fitness Subscriptions</p>
+          </div>
+          <div class="stat-box">
+            <h3>Fast</h3>
+            <p>Service</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Official Menu Section -->
+  <section id="menu" class="section menu-section">
+    <div class="section-container">
+      <div class="section-header center">
+        <div class="section-tag">
+          <i data-lucide="file-text"></i>
+          <span>EXPLORE OUR FULL MENU</span>
+        </div>
+        <h2 class="section-title">Official <span class="highlight-gold">Menu & Prices</span></h2>
+        <p class="section-subtitle">Select a category or search your cravings. All prices are in Indian Rupees (₹).</p>
+      </div>
+
+      <!-- Search & Category Tabs -->
+      <div class="menu-toolbar">
+        <div class="search-box">
+          <i data-lucide="search"></i>
+          <input type="text" id="menu-search-input" placeholder="Search ABC juice, oreo shake, pakoda, maggie..." aria-label="Search Menu Items">
+        </div>
+
+        <div class="menu-category-tabs" id="category-tabs">
+          <button class="tab-btn active" data-category="all"><i data-lucide="grid"></i> All Items</button>
+          <button class="tab-btn" data-category="juices"><i data-lucide="citrus"></i> Fresh Juices</button>
+          <button class="tab-btn" data-category="mocktails"><i data-lucide="glass-water"></i> Mocktails</button>
+          <button class="tab-btn" data-category="milkshakes"><i data-lucide="milk"></i> Milkshakes</button>
+          <button class="tab-btn" data-category="icecream"><i data-lucide="ice-cream"></i> Ice Cream</button>
+          <button class="tab-btn" data-category="snacks"><i data-lucide="flame"></i> Snacks</button>
+          <button class="tab-btn" data-category="maggie"><i data-lucide="utensils"></i> Maggie World</button>
+          <button class="tab-btn" data-category="protein"><i data-lucide="dumbbell"></i> High Protein</button>
+        </div>
+      </div>
+
+      <!-- Menu Grid -->
+      <div class="menu-grid" id="menu-grid"></div>
+    </div>
+  </section>
+
+  <!-- Interactive Table & Meal Plan Booking System Section -->
+  <section id="reserve" class="section reserve-section">
+    <div class="section-container">
+      <div class="section-header center">
+        <div class="section-tag">
+          <i data-lucide="calendar"></i>
+          <span>ONLINE BOOKING PLATFORM</span>
+        </div>
+        <h2 class="section-title">Reserve <span class="highlight-gold">Table or Meal Plan</span></h2>
+        <p class="section-subtitle">Choose between Dine-In Table Reservation or Monthly Fitness Subscription. Instant WhatsApp confirmation available!</p>
+      </div>
+
+      <!-- Booking Mode Switcher Tabs -->
+      <div class="booking-tabs">
+        <button class="booking-tab-btn active" id="tab-mode-table" data-mode="table">
+          <i data-lucide="armchair"></i>
+          <span>Dine-In Table Reservation</span>
+        </button>
+        <button class="booking-tab-btn" id="tab-mode-plan" data-mode="plan">
+          <i data-lucide="dumbbell"></i>
+          <span>Monthly Fitness Meal Subscription</span>
+        </button>
+      </div>
+
+      <div class="grid-2-col">
+        <!-- Interactive Selection Container -->
+        <div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;" id="picker-title">Select Table Seating Zone</h3>
+          <p style="color: var(--color-muted); font-size: 0.85rem; margin-bottom: 1.2rem;" id="picker-subtitle">
+            Click on a seating area to lock in your reservation preference.
+          </p>
+
+          <div class="booking-picker-grid" id="booking-picker-grid">
+            <!-- Dynamic Options Rendered via JS -->
+          </div>
+
+          <div style="background: var(--bg-card); border: 1px solid var(--color-border); border-radius: 16px; padding: 1.2rem; margin-top: 1.5rem;">
+            <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.5rem;">
+              <i data-lucide="shield-check" style="color: var(--color-gold-bright);"></i>
+              <strong style="font-size: 0.9rem;">Instant Confirmation Guarantee</strong>
+            </div>
+            <p style="font-size: 0.78rem; color: var(--color-muted);">
+              Reservations are stored instantly and can be sent directly to our kitchen staff on WhatsApp (9490528726).
+            </p>
+          </div>
+        </div>
+
+        <!-- Booking Form Card -->
+        <div class="reserve-form-card card-hover-lift">
+          <form id="reservation-form">
+            <h3 style="font-size: 1.4rem; margin-bottom: 1.2rem;" id="form-heading">Complete Table Booking</h3>
+            
+            <div class="form-group">
+              <label for="res-name"><i data-lucide="user"></i> Full Name</label>
+              <input type="text" id="res-name" required placeholder="e.g. Rahul Sharma">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="res-phone"><i data-lucide="phone"></i> Phone Number</label>
+                <input type="tel" id="res-phone" required placeholder="e.g. 9490528726">
+              </div>
+              <div class="form-group">
+                <label for="res-email"><i data-lucide="mail"></i> Email Address (Optional)</label>
+                <input type="email" id="res-email" placeholder="e.g. rahul@gmail.com">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="res-date"><i data-lucide="calendar"></i> Date</label>
+                <input type="date" id="res-date" required>
+              </div>
+              <div class="form-group">
+                <label for="res-time"><i data-lucide="clock"></i> Time Slot / Pickup</label>
+                <select id="res-time" required>
+                  <option value="09:00 AM">09:00 AM (Morning)</option>
+                  <option value="01:00 PM">01:00 PM (Lunch)</option>
+                  <option value="05:30 PM">05:30 PM (Evening)</option>
+                  <option value="08:00 PM" selected>08:00 PM (Dinner)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="res-guests" id="guests-label"><i data-lucide="users"></i> Party Size / Guests</label>
+              <select id="res-guests" required>
+                <option value="1 Person">1 Person</option>
+                <option value="2 People" selected>2 People</option>
+                <option value="4 People Family">4 People (Family Table)</option>
+                <option value="6+ Group Party">6+ Group Party</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="res-notes"><i data-lucide="message-square"></i> Special Instructions (Optional)</label>
+              <input type="text" id="res-notes" placeholder="e.g. High chair needed, less spicy, birthday setup">
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+              <button type="submit" class="btn btn-primary btn-block">
+                <span>Confirm & Generate Booking Pass</span>
+                <i data-lucide="check"></i>
+              </button>
+
+              <button type="button" id="instant-whatsapp-btn" class="btn whatsapp-btn btn-block">
+                <i data-lucide="send"></i> Book Instantly via WhatsApp (9490528726)
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Google Maps Integration Section -->
+  <section id="contact" class="section contact-section">
+    <div class="section-container grid-2-col">
+      <div>
+        <div class="section-tag"><i data-lucide="map-pin"></i> LOCATION & DIRECT CONTACT</div>
+        <h2 class="section-title">Visit <span class="highlight-gold">OMMI Outlet</span></h2>
+        <p style="color: var(--color-muted); margin-bottom: 2rem;">Drop in for a quick shake, Maggie, or high-protein meal!</p>
+
+        <div style="display: flex; flex-direction: column; gap: 1.2rem; font-size: 0.9rem; margin-bottom: 2rem;">
+          <div><strong style="color: var(--color-gold-bright);">Outlet Address:</strong> OMMI Cafe & Kitchen Counter</div>
+          <div><strong style="color: var(--color-gold-bright);">Opening Hours:</strong> Mon - Sun: 8:00 AM - 11:00 PM</div>
+          <div><strong style="color: var(--color-gold-bright);">Direct Call / WhatsApp:</strong> <a href="tel:9490528726" style="color: var(--color-gold-bright); font-weight: 700;">9490528726</a></div>
+        </div>
+
+        <a href="https://www.google.com/maps/place/Ommi+cafe+%26+kitchen/data=!4m2!3m1!1s0x0:0x18d28ced9792ffef?sa=X&ved=1t:2428&ictx=111" target="_blank" rel="noopener" class="btn btn-primary">
+          <i data-lucide="navigation"></i> Get Directions on Google Maps
+        </a>
+      </div>
+
+      <!-- Embedded Google Maps Container -->
+      <div class="maps-container card-hover-lift">
+        <iframe 
+          class="maps-iframe"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.5!2d78.4!3d17.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x18d28ced9792ffef!2sOmmi%20cafe%20%26%20kitchen!5e0!3m2!1sen!2sin!4v1700000000000" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 OMMI Cafe & Kitchen. Eat Right • Train Hard • Live Strong. For Booking: 9490528726.</p>
+  </footer>
+
+  <!-- Slide-Over Shopping Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Cart">
+    <div class="cart-header">
+      <div class="cart-title">
+        <i data-lucide="shopping-bag"></i>
+        <h3>Your Order Cart</h3>
+        <span id="cart-drawer-count">(0 items)</span>
+      </div>
+      <button id="cart-close-btn" style="background: transparent; border: none; color: white; cursor: pointer;"><i data-lucide="x"></i></button>
+    </div>
+
+    <div class="cart-body" id="cart-body">
+      <div id="cart-empty-view" style="text-align: center; padding: 3rem 1rem; color: var(--color-muted);">
+        <i data-lucide="utensils" style="width: 48px; height: 48px; margin-bottom: 1rem; color: var(--color-gold);"></i>
+        <h4>Your cart is empty</h4>
+        <p>Explore our menu and add your favorite shakes or snacks!</p>
+      </div>
+      <div class="cart-items-list" id="cart-items-list"></div>
+    </div>
+
+    <div class="cart-footer">
+      <!-- Quick Order Details -->
+      <div style="margin-bottom: 1rem;">
+        <div style="font-size: 0.78rem; font-weight: 700; color: var(--color-gold-bright); margin-bottom: 0.6rem; letter-spacing: 0.5px;">📋 YOUR DETAILS FOR ORDER</div>
+        <input type="text" id="order-name" placeholder="Full Name *" autocomplete="name"
+          style="width:100%; padding:0.65rem 1rem; background:var(--bg-dark); border:1px solid var(--color-border); border-radius:10px; color:white; font-size:0.85rem; outline:none; margin-bottom:0.5rem; font-family:var(--font-body); transition:border-color 0.2s;">
+        <input type="tel" id="order-phone" placeholder="Phone Number * (10 digits)" autocomplete="tel"
+          style="width:100%; padding:0.65rem 1rem; background:var(--bg-dark); border:1px solid var(--color-border); border-radius:10px; color:white; font-size:0.85rem; outline:none; font-family:var(--font-body); transition:border-color 0.2s;">
+      </div>
+      <div style="display: flex; justify-content: space-between; align-items:center; margin-bottom: 1rem; font-weight: 700; background:rgba(212,175,55,0.08); padding:0.7rem 1rem; border-radius:10px; border:1px solid var(--color-border);">
+        <span>Total Amount:</span>
+        <span id="cart-total" style="color: var(--color-gold-bright); font-size: 1.2rem;">₹0</span>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:0.6rem;">
+        <button class="btn btn-primary btn-block" id="checkout-btn">
+          <i data-lucide="check-circle"></i> Confirm &amp; Get Booking Pass
+        </button>
+        <button class="btn whatsapp-btn btn-block" id="checkout-whatsapp-btn">
+          <i data-lucide="send"></i> Order via WhatsApp (9490528726)
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- My Bookings Drawer -->
+  <div class="drawer-overlay" id="bookings-overlay"></div>
+  <aside class="drawer-panel" id="bookings-drawer" aria-label="My Bookings">
+    <div class="drawer-header">
+      <div class="drawer-title">
+        <i data-lucide="calendar"></i>
+        <h3>My Bookings</h3>
+      </div>
+      <button id="bookings-close-btn" style="background: transparent; border: none; color: white; cursor: pointer;"><i data-lucide="x"></i></button>
+    </div>
+
+    <div class="drawer-body" id="bookings-list-body">
+      <!-- Dynamic Bookings Rendered Here -->
+    </div>
+  </aside>
+
+  <!-- Digital Booking Pass Confirmation Modal -->
+  <div class="modal-overlay" id="booking-pass-modal">
+    <div class="modal-card" style="padding: 2rem; max-width: 520px; text-align: center;">
+      <button id="pass-close-btn" style="position: absolute; top: 15px; right: 15px; background: rgba(0,0,0,0.6); border: none; color: white; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;"><i data-lucide="x"></i></button>
+      
+      <i data-lucide="check-circle" style="width: 54px; height: 54px; color: #22c55e; margin-bottom: 0.8rem;"></i>
+      <h3 style="font-size: 1.5rem; margin-bottom: 0.3rem;">Booking Confirmed!</h3>
+      <p style="color: var(--color-muted); font-size: 0.88rem; margin-bottom: 1.5rem;">Your reservation pass has been generated and saved to your browser.</p>
+
+      <!-- Digital Ticket Card -->
+      <div class="booking-ticket-card" id="pass-ticket-content">
+        <!-- Rendered via JS -->
+      </div>
+
+      <div style="display: flex; gap: 0.8rem; margin-top: 1.5rem;">
+        <a id="whatsapp-send-link" href="#" target="_blank" rel="noopener" class="btn whatsapp-btn btn-block" style="text-decoration: none;">
+          <i data-lucide="send"></i> Send to WhatsApp (9490528726)
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Official Fitness Plan Board Lightbox Modal -->
+  <div class="modal-overlay" id="plan-board-modal-overlay">
+    <div class="modal-card" style="padding: 1.5rem; max-width: 850px;">
+      <button id="plan-board-close-btn" style="position: absolute; top: 15px; right: 15px; background: rgba(0,0,0,0.6); border: none; color: white; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;"><i data-lucide="x"></i></button>
+      <h3 style="margin-bottom: 1rem; color: var(--color-gold-bright);"><i data-lucide="dumbbell"></i> Official OMMI Fitness Meal Plan Board</h3>
+      <div style="border-radius: 12px; overflow: hidden; max-height: 80vh; overflow-y: auto;">
+        <img src="assets/ommi_fitness_plan_board.png" alt="Official OMMI Fitness Meal Plan Board" style="width: 100%; height: auto; display: block;">
+      </div>
+    </div>
+  </div>
+
+  <!-- App Script -->
+  <script src="app.js"></script>
+</body>
+</html>
